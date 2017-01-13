@@ -1,0 +1,7 @@
+yooo {{ request.user }}
+<dl>
+	{% for k, v in request.session.iteritems %}
+	<dt>{{ k }}</dt>
+	<dd>{{ v }}</dd>
+	{% endfor %}
+</dl>
