@@ -17,10 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.views.generic import TemplateView
 
-from testsessions.views import SetSessionView
+from testsessions.views import ExitView, SetSessionView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='testsessions/testsessions.html')),
-    url(r'^set/$', SetSessionView.as_view())
+    url(r'^set/$', SetSessionView.as_view()),
+    url(r'^exit/$', ExitView.as_view())
 ]
